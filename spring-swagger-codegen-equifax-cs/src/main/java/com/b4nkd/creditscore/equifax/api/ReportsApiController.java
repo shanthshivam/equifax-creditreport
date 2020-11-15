@@ -1,5 +1,6 @@
 package com.b4nkd.creditscore.equifax.api;
 
+
 import com.b4nkd.creditscore.equifax.model.APIErrorResponse;
 import com.b4nkd.creditscore.equifax.model.CreditReportRequest;
 import com.b4nkd.creditscore.equifax.model.CreditReportResponse;
