@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: shant
+Build-Jdk: 14.0.2
+Implementation-Title: spring-swagger-codegen-equifax-cs
+Implementation-Version: 1.0.0
+Implementation-Vendor-Id: com.b4nkd.creditscore.equifax.cs
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: https://projects.spring.io/spring-boot/spring-swagge
+ r-codegen-equifax-cs/
+Created-By: Maven Integration for Eclipse
+

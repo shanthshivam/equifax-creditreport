@@ -1,0 +1,107 @@
+package com.b4nkd.creditscore.equifax.model;
+
+import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import org.springframework.validation.annotation.Validated;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+
+/**
+ * Customers using an \&quot;IG\&quot;, \&quot;IL\&quot;, \&quot;IZ\&quot; or \&quot;RT\&quot; Industry Code are only required to send the appropriate Permissible Purpose Code. Customers using a \&quot;ZB\&quot; or \&quot;ZT\&quot; Industry Code must include both the \&quot;End Users Name\&quot; and the applicable Permissible Purpose code. 
+ */
+@ApiModel(description = "Customers using an \"IG\", \"IL\", \"IZ\" or \"RT\" Industry Code are only required to send the appropriate Permissible Purpose Code. Customers using a \"ZB\" or \"ZT\" Industry Code must include both the \"End Users Name\" and the applicable Permissible Purpose code. ")
+@Validated
+@javax.annotation.Generated(value = "io.swagger.codegen.v3.generators.java.SpringCodegen", date = "2020-11-08T10:55:31.099545300Z[Europe/London]")
+
+
+public class EquifaxUSConsumerCreditRequestEndUserInformation   {
+  @JsonProperty("endUsersName")
+  private String endUsersName = null;
+
+  @JsonProperty("permissiblePurposeCode")
+  private String permissiblePurposeCode = null;
+
+  public EquifaxUSConsumerCreditRequestEndUserInformation endUsersName(String endUsersName) {
+    this.endUsersName = endUsersName;
+    return this;
+  }
+
+  /**
+   * Company name of the final recipient of the consumer report making the request
+   * @return endUsersName
+  **/
+  @ApiModelProperty(required = true, value = "Company name of the final recipient of the consumer report making the request")
+      @NotNull
+
+  @Size(max=20)   public String getEndUsersName() {
+    return endUsersName;
+  }
+
+  public void setEndUsersName(String endUsersName) {
+    this.endUsersName = endUsersName;
+  }
+
+  public EquifaxUSConsumerCreditRequestEndUserInformation permissiblePurposeCode(String permissiblePurposeCode) {
+    this.permissiblePurposeCode = permissiblePurposeCode;
+    return this;
+  }
+
+  /**
+   * Code to audit the purposes for which Equifax consumer information is furnished thus providing continued compliance with the FCRA   - 01: Intends to use the information as a potential investor servicer or current insurer in connection with a valuation of or assessment of the credit or prepayment risks.   - 03: In accordance with written instructions of the consumer to whom it relates.   - 04: In connection with a collection transaction involving a credit account of the consumer.   - 05: In response to an agency administering a state plan under Section 454 of the Social Security Act (42 U.S.C. 654) for use to set an initial or modified child support award.   - 06: In accordance with written instructions of the consumer through a reseller.   - 07: In response to a request by the head of a state or local child support enforcement agency (or a state or local government official authorized by the head of such an agency) that has met all requirements of Section 604(a)(4)(ABCD).   - 08: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer. For use only when the transaction cannot be described with a more specific code.   - 09: For employment purposes (Only PERSONA is available with this code)   - 10: In connection with a determination of eligibility for a license or other benefit granted by a governmental instrument required by law to consider financial responsibility or status.   - 11: In connection with the underwriting of insurance.   - 12: In connection with the review of existing policy holders for insurance underwriting purposes.   - 13: A legitimate business need to review an account to determine whether the consumer continues to meet the terms of the account.   - 14: In response to the order of a court having jurisdiction or a subpoena issued by a federal grand jury.   - 15: In connection with a tenant screen application involving the consumer.   - 16: For use by a governmental agency pursuant to FCRA Section 608.   - 17: To protect against or prevent actual or potential fraud unauthorized transactions claims or other liability.   - 18: For required institutional risk control or for resolving consumer disputes or inquiries.   - 19: Due to holding a legal or beneficial interest relating to the consumer.   - 20: To law enforcement agencies or for an investigation on a matter related to public safety.   - 21: As necessary to effect administer or enforce a transaction; to underwrite insurance at the consumer’s request for reinsurance purposes or for the following purposes related to the consumer’s insurance;  account administration reporting investigating fraud prevention premium payment processing claim processing benefit administration or research projects.   - 22: To persons acting in a fiduciary or representative capacity on behalf of and with the consent of the consumer.   - 23: As necessary to effect administer or enforce a transaction requested or authorized by the consumer including location for collection of a delinquent account.   - 24: In conjunction with access to a commercial file on a sole proprietorship.   - 25: In conjunction with access to a commercial file on a corporation where specific consumer consent is given.   - 26: In connection with a credit transaction involving the extension of credit to or review or collection of an account of the consumer where the medical information to be furnished is relevant to process or effect the transaction and specific consumer consent was provided for the furnishing of the consumer report that describes the use of which the medical information will be furnished.   - 27: For employment purposes where the medical information to be furnished is relevant to process or effect the transaction and specific consumer consent was provided for the furnishing of the consumer report that describes the use for which the medical information will be furnished.    - 28: In connection with the underwriting of insurance. Specific consumer consent was given for the release of medical information contained within the consumer report.   - 29: In connection with a transaction where the credit file including any medical information in it is only to be provided directly to the individual consumer to whom the information relates and specific consumer consent was received for the receipt and furnishing of the consumer report including medical information to the consumer.   - 51: In accordance with written instructions of the consumer providing consent for use related to bankruptcy filing purposes.   - 52: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to an automobile or truck.   - 53: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to automotive repair.   - 54: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to automotive parts tires etc.   - 55: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to a boat or recreational vehicle.   - 56: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to farm equipment.   - 57: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to a mortgage loan origination.   - 58: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to a mortgage loan refinancing.   - 59: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to a home equity loan line of credit.   - 60: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to a personal loan.   - 61: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to a credit card.   - 62: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to home furnishings.   - 63: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to general contracting / home improvement.   - 64: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to air conditioning / heating / plumbing or electrical.   - 65: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to lumber / building materials / hardware.   - 66: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to hospitalization / medical care / dental care.   - 67: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to personal services.   - 68: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to home heating oil / fuel.   - 69: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to telephone / electrical / gas / water utilities or household garbage removal.   - 70: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to wholesale goods.   - 71: For the purpose of providing a consumer with a copy of his/her consumer report or credit score upon the consumer’s request.   - 72: For the purpose of administering a credit file or credit score monitoring service to which the consumer has subscribed.   - 73: For use by a housing counseling agency where the consumer has provided his / her specific consent.    
+   * @return permissiblePurposeCode
+  **/
+  @ApiModelProperty(required = true, value = "Code to audit the purposes for which Equifax consumer information is furnished thus providing continued compliance with the FCRA   - 01: Intends to use the information as a potential investor servicer or current insurer in connection with a valuation of or assessment of the credit or prepayment risks.   - 03: In accordance with written instructions of the consumer to whom it relates.   - 04: In connection with a collection transaction involving a credit account of the consumer.   - 05: In response to an agency administering a state plan under Section 454 of the Social Security Act (42 U.S.C. 654) for use to set an initial or modified child support award.   - 06: In accordance with written instructions of the consumer through a reseller.   - 07: In response to a request by the head of a state or local child support enforcement agency (or a state or local government official authorized by the head of such an agency) that has met all requirements of Section 604(a)(4)(ABCD).   - 08: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer. For use only when the transaction cannot be described with a more specific code.   - 09: For employment purposes (Only PERSONA is available with this code)   - 10: In connection with a determination of eligibility for a license or other benefit granted by a governmental instrument required by law to consider financial responsibility or status.   - 11: In connection with the underwriting of insurance.   - 12: In connection with the review of existing policy holders for insurance underwriting purposes.   - 13: A legitimate business need to review an account to determine whether the consumer continues to meet the terms of the account.   - 14: In response to the order of a court having jurisdiction or a subpoena issued by a federal grand jury.   - 15: In connection with a tenant screen application involving the consumer.   - 16: For use by a governmental agency pursuant to FCRA Section 608.   - 17: To protect against or prevent actual or potential fraud unauthorized transactions claims or other liability.   - 18: For required institutional risk control or for resolving consumer disputes or inquiries.   - 19: Due to holding a legal or beneficial interest relating to the consumer.   - 20: To law enforcement agencies or for an investigation on a matter related to public safety.   - 21: As necessary to effect administer or enforce a transaction; to underwrite insurance at the consumer’s request for reinsurance purposes or for the following purposes related to the consumer’s insurance;  account administration reporting investigating fraud prevention premium payment processing claim processing benefit administration or research projects.   - 22: To persons acting in a fiduciary or representative capacity on behalf of and with the consent of the consumer.   - 23: As necessary to effect administer or enforce a transaction requested or authorized by the consumer including location for collection of a delinquent account.   - 24: In conjunction with access to a commercial file on a sole proprietorship.   - 25: In conjunction with access to a commercial file on a corporation where specific consumer consent is given.   - 26: In connection with a credit transaction involving the extension of credit to or review or collection of an account of the consumer where the medical information to be furnished is relevant to process or effect the transaction and specific consumer consent was provided for the furnishing of the consumer report that describes the use of which the medical information will be furnished.   - 27: For employment purposes where the medical information to be furnished is relevant to process or effect the transaction and specific consumer consent was provided for the furnishing of the consumer report that describes the use for which the medical information will be furnished.    - 28: In connection with the underwriting of insurance. Specific consumer consent was given for the release of medical information contained within the consumer report.   - 29: In connection with a transaction where the credit file including any medical information in it is only to be provided directly to the individual consumer to whom the information relates and specific consumer consent was received for the receipt and furnishing of the consumer report including medical information to the consumer.   - 51: In accordance with written instructions of the consumer providing consent for use related to bankruptcy filing purposes.   - 52: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to an automobile or truck.   - 53: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to automotive repair.   - 54: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to automotive parts tires etc.   - 55: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to a boat or recreational vehicle.   - 56: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to farm equipment.   - 57: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to a mortgage loan origination.   - 58: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to a mortgage loan refinancing.   - 59: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to a home equity loan line of credit.   - 60: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to a personal loan.   - 61: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to a credit card.   - 62: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to home furnishings.   - 63: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to general contracting / home improvement.   - 64: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to air conditioning / heating / plumbing or electrical.   - 65: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to lumber / building materials / hardware.   - 66: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to hospitalization / medical care / dental care.   - 67: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to personal services.   - 68: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to home heating oil / fuel.   - 69: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to telephone / electrical / gas / water utilities or household garbage removal.   - 70: In connection with a credit transaction involving the consumer and for the extension of credit or review or collection of an account of the consumer related to wholesale goods.   - 71: For the purpose of providing a consumer with a copy of his/her consumer report or credit score upon the consumer’s request.   - 72: For the purpose of administering a credit file or credit score monitoring service to which the consumer has subscribed.   - 73: For use by a housing counseling agency where the consumer has provided his / her specific consent.    ")
+      @NotNull
+
+  @Size(max=2)   public String getPermissiblePurposeCode() {
+    return permissiblePurposeCode;
+  }
+
+  public void setPermissiblePurposeCode(String permissiblePurposeCode) {
+    this.permissiblePurposeCode = permissiblePurposeCode;
+  }
+
+
+  @Override
+  public boolean equals(java.lang.Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (o == null || getClass() != o.getClass()) {
+      return false;
+    }
+    EquifaxUSConsumerCreditRequestEndUserInformation equifaxUSConsumerCreditRequestEndUserInformation = (EquifaxUSConsumerCreditRequestEndUserInformation) o;
+    return Objects.equals(this.endUsersName, equifaxUSConsumerCreditRequestEndUserInformation.endUsersName) &&
+        Objects.equals(this.permissiblePurposeCode, equifaxUSConsumerCreditRequestEndUserInformation.permissiblePurposeCode);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(endUsersName, permissiblePurposeCode);
+  }
+
+  @Override
+  public String toString() {
+    StringBuilder sb = new StringBuilder();
+    sb.append("class EquifaxUSConsumerCreditRequestEndUserInformation {\n");
+    
+    sb.append("    endUsersName: ").append(toIndentedString(endUsersName)).append("\n");
+    sb.append("    permissiblePurposeCode: ").append(toIndentedString(permissiblePurposeCode)).append("\n");
+    sb.append("}");
+    return sb.toString();
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(java.lang.Object o) {
+    if (o == null) {
+      return "null";
+    }
+    return o.toString().replace("\n", "\n    ");
+  }
+}
